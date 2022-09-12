@@ -6,7 +6,7 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 11:41:35 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/02 13:35:46 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/12 13:59:50 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
+
+//MIRARLO
