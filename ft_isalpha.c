@@ -6,7 +6,7 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 11:40:56 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/08/31 14:10:42 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/12 15:33:24 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,5 @@ int	ft_isalpha(int c)
 		return (1);
 	else if (c >= 'A' && c <= 'Z')
 		return (1);
-	else
-		return (0);
+	return (0);
 }

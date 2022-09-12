@@ -6,7 +6,7 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 11:40:51 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/12 14:12:37 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/12 15:22:19 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@
 	return (memory);
 }
 
-int main(void)
+/*int main(void)
 {
    int *pData;
  
@@ -54,4 +54,4 @@ int main(void)
    free(pData);
    system("pause");
    return (0);
-}
+}*/
