@@ -6,7 +6,7 @@
 #    By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 12:03:57 by acuesta-          #+#    #+#              #
-#    Updated: 2022/09/12 16:10:02 by acuesta-         ###   ########.fr        #
+#    Updated: 2022/09/13 15:15:53 by acuesta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,10 @@ SRCS = ft_atoi.c \
 	   ft_tolower.c \
 	   ft_toupper.c \
 	   ft_calloc.c \
-	   ft_substr.c \
+	   ft_putendl_fd.c \
+	   ft_putstr_fd.c \
+	   ft_putchar_fd.c \
+	   ft_putnbr_fd.c \
 
 
 OBJS = $(SRCS:.c=.o)
