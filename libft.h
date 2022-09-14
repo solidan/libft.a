@@ -6,7 +6,7 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:22:54 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/13 15:15:40 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/14 11:33:56 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strjoin(char const *s1, char const *s2);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	ft_putendl_fd(char *s, int fd);

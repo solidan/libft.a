@@ -6,7 +6,7 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:50:30 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/13 11:54:48 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/14 13:14:15 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ void ft_putendl_fd(char *s, int fd)
    write(fd, "\n", 1);
 }
 
-int main(void)
-{
-   char    *c;
-   int     fd;
-   c = "MAI";
-   fd = 1;
-   ft_putendl_fd(c, fd);
-}
+// int main(void)
+// {
+//    char    *c;
+//    int     fd;
+//    c = "MAI";
+//    fd = 1;
+//    ft_putendl_fd(c, fd);
+// }
