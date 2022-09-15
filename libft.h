@@ -6,7 +6,7 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:22:54 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/14 11:33:56 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/15 11:47:23 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strjoin(char const *s1, char const *s2);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	ft_putendl_fd(char *s, int fd);

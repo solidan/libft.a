@@ -6,7 +6,7 @@
 #    By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 12:03:57 by acuesta-          #+#    #+#              #
-#    Updated: 2022/09/14 12:48:14 by acuesta-         ###   ########.fr        #
+#    Updated: 2022/09/15 11:47:34 by acuesta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,8 @@ SRCS = ft_atoi.c \
 	   ft_putchar_fd.c \
 	   ft_putnbr_fd.c \
 	   ft_strjoin.c \
+	   ft_striteri.c \
+	   ft_strmapi.c \
 
 
 OBJS = $(SRCS:.c=.o)
