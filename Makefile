@@ -6,7 +6,7 @@
 #    By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 12:03:57 by acuesta-          #+#    #+#              #
-#    Updated: 2022/09/16 13:54:05 by acuesta-         ###   ########.fr        #
+#    Updated: 2022/09/19 11:06:20 by acuesta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,9 @@ SRCS = ft_atoi.c \
 	   ft_strmapi.c \
 	   ft_substr.c \
 	   ft_strtrim.c \
-	   ft_itoa.c \
+	   ft_split.c \
+	
+	
 
 
 OBJS = $(SRCS:.c=.o)

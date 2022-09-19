@@ -6,13 +6,21 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:22:54 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/16 13:53:52 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/19 13:37:36 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+typedef struct s_list
+{
+	void 	*content;
+	struct 	s_list *next;
+} 			t_list;
 
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
@@ -46,5 +54,6 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
-char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
+
 #endif
