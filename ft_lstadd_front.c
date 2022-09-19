@@ -6,7 +6,13 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:52:20 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/19 12:52:21 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/19 13:54:49 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void ft_lstadd_front(t_list **lst, t_list *new)
+{
+	
+}
