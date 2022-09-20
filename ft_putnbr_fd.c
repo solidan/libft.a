@@ -6,7 +6,7 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:50:33 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/13 15:20:18 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/20 14:11:17 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,9 @@ void ft_putnbr_fd(int n, int fd)
        nb = (unsigned int)(n * -1);  
    }
    else
-   {
        nb = (unsigned int)(n);
-   }
    if (nb > 9)
-   {
        ft_putnbr_fd(nb / 10, fd);
-   }
    ft_putchar_fd((char)(nb % 10 + '0'), fd);
 }
 

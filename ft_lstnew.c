@@ -6,7 +6,7 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:47:30 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/19 13:52:23 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/20 11:00:28 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstnew(void *content)
 	t_list	*elt;
 
 	if (!(elt = (t_list*)malloc(sizeof(*elt))))
-		return(NULL);
+		return(0);
 	elt->content = content;
 	elt->next = NULL;
 	return (elt);

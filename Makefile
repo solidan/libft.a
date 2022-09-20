@@ -6,7 +6,7 @@
 #    By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 12:03:57 by acuesta-          #+#    #+#              #
-#    Updated: 2022/09/19 11:06:20 by acuesta-         ###   ########.fr        #
+#    Updated: 2022/09/20 14:03:10 by acuesta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,10 +45,12 @@ SRCS = ft_atoi.c \
 	   ft_substr.c \
 	   ft_strtrim.c \
 	   ft_split.c \
-	
-	
+	   ft_itoa.c \
+	   
+BONUSSRCS = ft_lstnew.c \
 
 
+BONUSOBJS = $(BONUSSRCS:.c=.o)
 OBJS = $(SRCS:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -57,12 +59,17 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc libft.a $(OBJS)
-	
+
+bonus:
+	$(CC) $(CFLAGS) -c $(SRCS) $(BONUSSRCS)
+	ar rc $(NAME) $(BONUSOBJS)
+
 %.o: %.c
-	 $(CC)  $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $(SRCS)
+
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(BONUSOBJS)
 
 fclean: clean
 	rm -f $(NAME)
@@ -70,6 +77,8 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean
+
+
 
 
 
