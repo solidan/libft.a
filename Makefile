@@ -6,7 +6,7 @@
 #    By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 12:03:57 by acuesta-          #+#    #+#              #
-#    Updated: 2022/09/20 14:03:10 by acuesta-         ###   ########.fr        #
+#    Updated: 2022/09/21 12:24:38 by acuesta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,8 @@ SRCS = ft_atoi.c \
 	   ft_itoa.c \
 	   
 BONUSSRCS = ft_lstnew.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
 
 
 BONUSOBJS = $(BONUSSRCS:.c=.o)

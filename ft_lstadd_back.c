@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:52:20 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/21 13:17:43 by acuesta-         ###   ########.fr       */
+/*   Created: 2022/09/21 12:33:36 by acuesta-          #+#    #+#             */
+/*   Updated: 2022/09/21 13:17:49 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+#include "libft.h"
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (lst && new)
+	t_list	*last_node;
+
+	if (lst == 0 || new == 0)
+		return ;
+	if (*lst == NULL)
 	{
-		new->next = *lst;
 		*lst = new;
+		return ;
 	}
+	last_node = ft_lstlast(*lst);
+	last_node->next = new;
+
 }
 
 
@@ -67,6 +74,14 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 // 	elem3 = ft_lstnewone(str3);
 // 	elem4 = ft_lstnewone(str4);
 // 	begin = NULL;
-// 	ft_lstadd_front(&begin, elem4);
-// 	ft_lstadd_front(&begin, elem3);
+// 	ft_lstadd_back(&begin, elem);
+// 	ft_lstadd_back(&begin, elem2);
+// 	ft_lstadd_back(&begin, elem3);
+// 	ft_lstadd_back(&begin, elem4);
+// 	while (begin)
+// 	{
+// 		ft_print_result(begin);
+// 		begin = begin->next;
+// 	}
+// 	return (0);
 // }

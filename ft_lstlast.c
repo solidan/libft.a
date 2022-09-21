@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:52:20 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/21 13:17:43 by acuesta-         ###   ########.fr       */
+/*   Created: 2022/09/21 11:29:31 by acuesta-          #+#    #+#             */
+/*   Updated: 2022/09/21 12:26:36 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void ft_lstadd_front(t_list **lst, t_list *new)
+#include <string.h>
+#include <stdio.h>
+t_list *ft_lstlast(t_list *lst)
 {
-	if (lst && new)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
+	if(!lst)
+		return(NULL);
+if (lst)
+		while (lst->next)
+			lst = lst->next;
+	return (lst);
 }
 
 
-
-
-// void	ft_print_result(t_list *elem)
-// {
-// 	int		len;
-
-// 	len = 0;
-// 	while (((char *)elem->content)[len])
-// 			len++;
-// 	write(1, elem->content, len);
-// 	write(1, "\n", 1);
-// }
 
 // t_list	*ft_lstnewone(void *content)
 // {
@@ -41,18 +31,20 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 
 // 	elem = (t_list *)malloc(sizeof(t_list));
 // 	if (!elem)
-// 			return (NULL);
+// 		return (NULL);
 // 	if (!content)
-// 			elem->content = NULL;
+// 		elem->content = NULL;
 // 	else
-// 			elem->content = content;
+// 		elem->content = content;
 // 	elem->next = NULL;
 // 	return (elem);
 // }
 
 // int	main(void)
 // {
-// 	t_list		*begin;
+// 	int			i;
+// 	char		*content;
+// 	t_list		*val;
 // 	t_list		*elem;
 // 	t_list		*elem2;
 // 	t_list		*elem3;
@@ -61,12 +53,21 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 // 	char		*str2 = strdup("ipsum");
 // 	char		*str3 = strdup("dolor");
 // 	char		*str4 = strdup("sit");
-
 // 	elem = ft_lstnewone(str);
 // 	elem2 = ft_lstnewone(str2);
 // 	elem3 = ft_lstnewone(str3);
 // 	elem4 = ft_lstnewone(str4);
-// 	begin = NULL;
-// 	ft_lstadd_front(&begin, elem4);
-// 	ft_lstadd_front(&begin, elem3);
+
+// 	elem->next = elem2;
+// 	elem2->next = elem3;
+// 	elem3->next = elem4;
+// 	val = ft_lstlast(elem);
+// 	i = 0;
+// 	content = val->content;
+// 	while (content[i])
+// 		write(1, &(content[i++]), 1);
+// 	write(1, "\n", 1);
+// 	elem->next = NULL;
+// 	val = ft_lstlast(elem);
+// 	content = val->content;
 // }
