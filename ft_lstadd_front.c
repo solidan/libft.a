@@ -6,11 +6,15 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:52:20 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/21 13:17:43 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/22 10:44:46 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {

@@ -6,7 +6,7 @@
 /*   By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 11:30:43 by acuesta-          #+#    #+#             */
-/*   Updated: 2022/09/09 16:57:20 by acuesta-         ###   ########.fr       */
+/*   Updated: 2022/09/22 13:09:18 by acuesta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ int	ft_atoi(const char *str)
 	if (str[c] == '+' || str[c] == '-')
 	{
 		if (str[c] == '-')
-		s *= -1;
-	c++;
+			s *= -1;
+		c++;
 	}
 	while (str[c] >= '0' && str[c] <= '9')
 	{
-	res = (res * 10) + (str[c] - '0');
-	c++;
+		res = (res * 10) + (str[c] - '0');
+		c++;
 	}
 	return (res * s);
 }

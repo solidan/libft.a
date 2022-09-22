@@ -6,17 +6,23 @@
 #    By: acuesta- <acuesta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 12:03:57 by acuesta-          #+#    #+#              #
-#    Updated: 2022/09/21 12:24:38 by acuesta-         ###   ########.fr        #
+#    Updated: 2022/09/22 11:24:28 by acuesta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
+INCLUDES = libft.h
+
+CC = gcc
+
+CFLAGS = -Wall -Wextra -Werror -g
+
 SRCS = ft_atoi.c \
 	   ft_bzero.c \
 	   ft_isalnum.c \
 	   ft_isascii.c \
-	   ft_isalpha.c\
+	   ft_isalpha.c \
 	   ft_isdigit.c \
 	   ft_isprint.c \
 	   ft_memchr.c \
@@ -50,35 +56,33 @@ SRCS = ft_atoi.c \
 BONUSSRCS = ft_lstnew.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstadd_front.c \
 
+OBJS = $(SRCS:.c=.o)
 
 BONUSOBJS = $(BONUSSRCS:.c=.o)
-OBJS = $(SRCS:.c=.o)
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-
-all: $(NAME)
-
-$(NAME): $(OBJS)
-	ar rc libft.a $(OBJS)
-
-bonus:
-	$(CC) $(CFLAGS) -c $(SRCS) $(BONUSSRCS)
-	ar rc $(NAME) $(BONUSOBJS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $(SRCS)
+	$(CC) -c $(CFLAGS) $^
+	
+all: $(NAME)
 
+$(NAME): $(OBJS) $(INCLUDES)
+	ar rsc $(NAME) $(OBJS)
+
+bonus: $(BONUSOBJS) $(OBJS) $(INCLUDES)
+	ar rsc $(NAME) $(BONUSOBJS) $(OBJS)
 
 clean:
-	rm -rf $(OBJS) $(BONUSOBJS)
+	rm -rf *.o
 
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re: fclean $(NAME)
 
-.PHONY: all clean fclean
+.PHONY: all clean fclean re  bonus
 
 
 
