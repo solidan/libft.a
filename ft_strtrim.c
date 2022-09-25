@@ -13,9 +13,10 @@
 #include "libft.h"
 #include <stdio.h>
 #include <unistd.h>
-char *ft_strtrim(char const *s1, char const *set)
+
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
+	size_t	i;
 
 	if (s1 == NULL || set == NULL)
 		return (NULL);
@@ -36,4 +37,5 @@ char *ft_strtrim(char const *s1, char const *set)
   	return 0;
   }
 */
-// gcc ft_strtrim.c ft_strchr.c ft_substr.c ft_strlen.c ft_strlcpy.c para poder usarlo 
+// gcc ft_strtrim.c ft_strchr.c ft_substr.c ft_strlen.c
+// ft_strlcpy.c para poder usarlo 

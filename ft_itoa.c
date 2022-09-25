@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-	static void	*ft_itovals(int n, int *p)
+static void	*ft_itovals(int n, int *p)
 {
 	*p = 0;
 	if (n == 0)

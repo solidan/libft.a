@@ -15,29 +15,28 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 {
-   char    *i;
- 
-   if (len > ft_strlen(s))
-   {
-       len = ft_strlen(s);
-   }
-   i = (char *)malloc(len + 1);
-   if (start > ft_strlen(s))
-   {
-       *i = '\0';
-       return (i);
-   }
-   if (!i)
-   {
-       return (0);
-   }
-   ft_strlcpy(i, &s[start], len + 1);
-   return (i);
+	char	*i;
+
+	if (len > ft_strlen(s))
+	{
+		len = ft_strlen(s);
+	}
+	i = (char *)malloc(len + 1);
+	if (start > ft_strlen(s))
+	{
+		*i = '\0';
+		return (i);
+	}
+	if (!i)
+	{
+		return (0);
+	}
+	ft_strlcpy(i, &s[start], len + 1);
+	return (i);
 }
- 
 
 /*
 {

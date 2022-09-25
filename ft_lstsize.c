@@ -10,13 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include <string.h>
 #include <stdio.h>
 #include "libft.h"   
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	size;
 
@@ -28,12 +26,6 @@ int ft_lstsize(t_list *lst)
 	}
 	return (size);
 }
-
-
-
-
-
-
 
 // void	ft_print_result(char const *s)
 // {

@@ -15,19 +15,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-void ft_lstdelone(t_list *lst, void (*del)(void
-*))
+
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst)
-		return;
+		return ;
 	if (del)
 		del(lst->content);
 	free(lst);
 }
-
-
-
-
 
 //  void	ft_print_result(t_list *elem)
 //  {
@@ -59,9 +55,6 @@ void ft_lstdelone(t_list *lst, void (*del)(void
 //  	elem->next = NULL;
 //  	return (elem);
 //  }
-
-
-
 
 //  int	main(void)
 //  {

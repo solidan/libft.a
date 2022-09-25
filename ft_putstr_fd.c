@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)
 	{
@@ -27,12 +27,11 @@ void ft_putstr_fd(char *s, int fd)
 // {
 //    char    *c;
 //    int     fd;
- 
+
 //    c = "MAI" "sgfs";
 //    fd = 1;
 //    ft_putstr_fd(c,fd);
 // }
-
 
 // int		i;
 

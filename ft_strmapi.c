@@ -15,29 +15,27 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	int		i;
 	char	*str;
-	
+
 	i = 0;
-	if(!s)
-		return(NULL);
+	if (!s)
+		return (NULL);
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
 	if (str == NULL)
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		str[i] = f(i, s[i]);
+		str[i] = f (i, s[i]);
 		i++;
 	}
 	str[i] = '\0';
 	return (str);
 }
 
-
- /*char mi_funcion(unsigned int i, char str)
+/*char mi_funcion(unsigned int i, char str)
 {
    i = 32;
    return (str - i);
@@ -53,4 +51,3 @@ int main(void)
    printf("el resultado es: %s\n", resultado);
    return (0);
 }*/
-

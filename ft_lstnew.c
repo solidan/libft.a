@@ -19,13 +19,13 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*elt;
+	t_list	*ltn;
 
-	if (!(elt = (t_list*)malloc(sizeof(*elt))))
-		return(0);
-	elt->content = content;
-	elt->next = NULL;
-	return (elt);
+	if (!(ltn = (t_list *) malloc(sizeof(*ltn))))
+		return (0);
+	ltn->content = content;
+	ltn->next = NULL;
+	return (ltn);
 }
 
 // void	ft_print_result(char const *s)
@@ -59,6 +59,6 @@ t_list	*ft_lstnew(void *content)
 // 			ft_print_result("NULL");
 // 		}
 // 	}
-	
+
 // 	return (0);
 // }

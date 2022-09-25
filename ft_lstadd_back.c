@@ -10,18 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-void ft_lstadd_back(t_list **lst, t_list *new)
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last_node;
 
 	if (lst == 0 || new == 0)
-		return;
+		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;
@@ -29,15 +29,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	last_node = ft_lstlast(*lst);
 	last_node->next = new;
-
 }
-
-
-
-
-
-
-
 
 //  void	ft_print_result(t_list *elem)
 //  {
@@ -48,7 +40,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 //  	write(1, elem->content, len);
 //  	write(1, "\n", 1);
 //  }
- 
+
 //  t_list	*ft_lstnewone(void *content)
 //  {
 //  	t_list	*elem;
@@ -62,7 +54,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 //  	elem->next = NULL;
 //  	return (elem);
 //  }
- 
+
 //  int	main(void)
 //  {
 //  	t_list		*begin;

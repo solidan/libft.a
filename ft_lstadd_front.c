@@ -16,7 +16,7 @@
 #include <string.h>
 #include <unistd.h>
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst && new)
 	{
@@ -24,9 +24,6 @@ void ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }
-
-
-
 
 // void	ft_print_result(t_list *elem)
 // {
